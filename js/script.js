@@ -48,9 +48,7 @@ createApp ({
     }, 2000)
 
 
-    this.timer = setInterval( () =>{
-      this.prevImage();
-    }, 6000)
+    
 
 
   },
@@ -65,6 +63,7 @@ createApp ({
    
     },
 
+
     prevImage(){
       if (this.counter > 0){
         this.counter--;
@@ -73,6 +72,10 @@ createApp ({
       }
     },
 
+
+    blockImage() {
+      clearInterval(this.timer);
+    },
 
   }
 
