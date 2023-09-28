@@ -22,12 +22,16 @@
 
          <!-- first carousel  -->
       <div class="images w-100 h-100">
-        <img v-for="image in imageObj" :src="imageObj[counter].image" class="w-100 h-100 object-fit-cover img-fluid">
+        <div class="card-sp w-100 h-100 item">
+          <img :src="imageObj[counter].image" class="w-100 h-100 object-fit-cover img-fluid">
+          <p class="text text-white">{{imageObj[counter].text}}</p>
+          </div>
+        
       </div>
 
        <!-- second carousel  -->
-      <div class="second-carousel h-100 w-25 bg-secondary ">
-        <img :src="imageObj.image" class="w-100 object-fit-cover h-20 thumb">
+      <div v-for="image in imageObj" class="second-carousel h-100 w-25 bg-secondary">
+        <img :src="imageObj[0].image" class="w-100 object-fit-cover h-20 thumb">
       </div>
     
 

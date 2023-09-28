@@ -5,7 +5,6 @@ createApp ({
 
   data(){
     return {
-      buttonTop: " ",
       counter: 0,
       title: 'Carosello Mono array',
       imageObj: [
@@ -45,6 +44,7 @@ createApp ({
   methods: {
     nextImage(){
       this.counter++
+
     },
 
     prevImage(){
