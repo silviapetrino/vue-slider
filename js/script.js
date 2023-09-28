@@ -7,6 +7,7 @@ createApp ({
     return {
     
       counter: 0,
+      timer: null,
       title: 'Carosello Mono array',
       imageObj: [
         {
@@ -41,23 +42,31 @@ createApp ({
   },
 
   mounted() {
-    
+
+    this.timer = setTimeout( () =>{
+      this.nextImage();
+    }, 3000)
+
   },
 
   methods: {
     nextImage(){
-      if (this.counter > 0){
-        this.counter--
+      if (this.counter < this.imageObj.length - 1){
+        this.counter++;
+      } else {
+        this.counter = 0;
       }
    
     },
 
     prevImage(){
-     
-      if (this.counter < this.imageObj.length - 1){
-        this.counter++
+      if (this.counter > 0){
+        this.counter--;
+      } else {
+        this.counter = this.imageObj-length -1;
       }
-    }
+    },
+
 
   }
 
