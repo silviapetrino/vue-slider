@@ -30,8 +30,10 @@
       </div>
 
        <!-- second carousel  -->
-      <div v-for="image in imageObj" class="second-carousel h-100 w-25 bg-secondary">
-        <img :src="imageObj[0].image" class="w-100 object-fit-cover h-20 thumb">
+      <div class="second-carousel h-100 w-25 bg-secondary">
+        <img v-for="(image, index) in imageObj" :src="image.image"
+        class="h-20 w-100 object-fit-cover" :class="{'active' : index === counter}"/>
+
       </div>
     
 

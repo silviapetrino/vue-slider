@@ -5,6 +5,7 @@ createApp ({
 
   data(){
     return {
+    
       counter: 0,
       title: 'Carosello Mono array',
       imageObj: [
@@ -33,7 +34,9 @@ createApp ({
             title: "Marvel's Avengers",
             text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
         }
-      ]
+      ],
+
+
     }
   },
 
@@ -43,12 +46,17 @@ createApp ({
 
   methods: {
     nextImage(){
-      this.counter++
-
+      if (this.counter > 0){
+        this.counter--
+      }
+   
     },
 
     prevImage(){
-      this.counter--
+     
+      if (this.counter < this.imageObj.length - 1){
+        this.counter++
+      }
     }
 
   }
