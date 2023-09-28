@@ -43,9 +43,15 @@ createApp ({
 
   mounted() {
 
-    this.timer = setTimeout( () =>{
+    this.timer = setInterval( () =>{
       this.nextImage();
-    }, 3000)
+    }, 2000)
+
+
+    this.timer = setInterval( () =>{
+      this.prevImage();
+    }, 6000)
+
 
   },
 
@@ -63,7 +69,7 @@ createApp ({
       if (this.counter > 0){
         this.counter--;
       } else {
-        this.counter = this.imageObj-length -1;
+        this.counter = this.imageObj.length -1;
       }
     },
 
