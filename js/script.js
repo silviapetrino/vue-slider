@@ -42,15 +42,7 @@ createApp ({
   },
 
   mounted() {
-
-    this.timer = setInterval( () =>{
-      this.nextImage();
-    }, 2000)
-
-
-    
-
-
+    this.startImage()
   },
 
   methods: {
@@ -76,6 +68,12 @@ createApp ({
     blockImage() {
       clearInterval(this.timer);
     },
+
+    startImage() {
+      this.timer = setInterval( () =>{
+        this.nextImage();
+      }, 2000)
+    }
 
   }
 

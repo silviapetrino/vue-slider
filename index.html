@@ -21,8 +21,8 @@
     <div class="slider w-100 h-100 text-end">
 
          <!-- first carousel  -->
-      <div @mouseenter="blockImage" class="images w-100 h-100">
-        <div class="card-sp w-100 h-100 item">
+      <div class="images w-100 h-100">
+        <div @mouseenter="blockImage"  @mouseleave="startImage" class="card-sp w-100 h-100 item">
           <img :src="imageObj[counter].image" class="w-100 h-100 object-fit-cover img-fluid">
           <p class="text text-white">{{imageObj[counter].text}}</p>
           </div>
