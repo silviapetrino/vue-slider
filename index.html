@@ -22,18 +22,18 @@
 
          <!-- first carousel  -->
       <div class="images w-100 h-100">
-       
+        <img v-for="image in imageObj" :src="imageObj[counter].image" class="w-100 h-100 object-fit-cover img-fluid">
       </div>
 
        <!-- second carousel  -->
       <div class="second-carousel h-100 w-25 bg-secondary ">
-
+        <img :src="imageObj.image" class="w-100 object-fit-cover h-20 thumb">
       </div>
     
 
       <!-- buttons  -->
-      <button class="btn_sp button-top rounded-5">&#9650;</button>
-      <button class="btn_sp button-bottom rounded-5">&#9660;</button>
+      <button @click="nextImage" class="btn_sp button-top rounded-5">&#9650;</button>
+      <button @click="prevImage" class="btn_sp button-bottom rounded-5">&#9660;</button>
   
     </div>
     
